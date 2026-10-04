@@ -1,0 +1,44 @@
+<div class="welcome-wrapper">
+    <h3 class="greet">Hello {{username}}</h3>
+</div>
+
+<style>
+:root {
+    --color-bg-start: #0f172a;
+    --color-bg-end: #1e293b;
+    --color-primary: #2563eb;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+}
+
+.welcome-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #1e3a8a 0%, var(--color-bg-start) 45%, var(--color-bg-end) 100%);
+    font-family: var(--font-family, 'Segoe UI', -apple-system, sans-serif);
+}
+
+.greet {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.greet::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background: var(--color-primary);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+</style>
